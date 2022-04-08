@@ -1,0 +1,3 @@
+[submodule "components/pngle"]
+	path = components/pngle
+	url = git://github.com/kikuchan/pngle.git
