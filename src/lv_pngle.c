@@ -1,4 +1,4 @@
-/** \file lv_pngle.h
+/** \file lv_pngle.c
  *  \brief Implementation file for LVGL decoder for PNG images using Pngle.
  *
  *  Author: Vincent Paeder
@@ -6,7 +6,7 @@
  */
 #include "lvgl.h"
 #include "lv_pngle.h"
-#include "pngle.h"
+#include "external/src/pngle.h"
 
 /** \fn lv_res_t pngle_decoder_info(struct _lv_img_decoder_t * decoder, const void * src, lv_img_header_t * header)
  *  \brief Retrieves PNG image size from given source.
@@ -29,7 +29,6 @@ static lv_res_t pngle_decoder_open(lv_img_decoder_t * dec, lv_img_decoder_dsc_t 
  *  \brief Closes and cleans up decoding data for given descriptor.
  *  \param dec: underlying image decoder.
  *  \param dsc: image descriptor.
- *  \returns LV_RES_OK if successful, LV_RES_INV if failed.
  */
 static void pngle_decoder_close(lv_img_decoder_t * dec, lv_img_decoder_dsc_t * dsc);
 
@@ -40,8 +39,7 @@ static void pngle_decoder_close(lv_img_decoder_t * dec, lv_img_decoder_dsc_t * d
  */
 static void convert_color_depth(uint8_t * img, uint32_t px_cnt);
 
-/** \class _lv_pngle_data_t
- *  \brief A structure to communicate data and useful flags with Pngle.
+/** \brief A structure to communicate data and useful flags with Pngle.
  */
 typedef struct _lv_pngle_data_t {
     /** \property bool hdr_ready
@@ -68,10 +66,10 @@ void lv_pngle_init(void) {
     lv_img_decoder_set_close_cb(dec, pngle_decoder_close);
 }
 
-/** \fn void convert_color_depth(uint8_t * img, uint32_t px_cnt)
- *  \brief Converts an image buffer to LVGL color format.
- *  \param img: pointer to image buffer.
- *  \param px_cnt: number of pixels.
+/** \fn void lv_pngle_data_init(pngle_t* pngle, lv_pngle_data_t * ud)
+ *  \brief Initializes a data structure to interact with Pngle.
+ *  \param pngle: pointer to a Pngle instance.
+ *  \param ud: pointer to the data structure to initialize.
  */
 static void lv_pngle_data_init(pngle_t* pngle, lv_pngle_data_t * ud) {
     ud = (lv_pngle_data_t*)malloc(sizeof(lv_pngle_data_t));
