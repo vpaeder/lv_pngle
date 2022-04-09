@@ -8,6 +8,8 @@
 #include "lv_pngle.h"
 #include "external/src/pngle.h"
 
+#define PNGLE_BUF_SIZE 1024 ///< Size of buffer used to feed Pngle
+
 /** \fn lv_res_t pngle_decoder_info(struct _lv_img_decoder_t * decoder, const void * src, lv_img_header_t * header)
  *  \brief Retrieves PNG image size from given source.
  *  \param decoder: underlying image decoder.
@@ -172,7 +174,7 @@ static void pngle_done_cb(pngle_t* pngle) {
 static lv_res_t read_next_chunk(pngle_t * pngle, lv_fs_file_t * f) {
     // chunk structure: length (4 bytes) | chunk type (4 bytes) | chunk data (length) | CRC (4 bytes)
     // we read 4 bytes to get length and add 8 bytes to account for type and CRC
-    char buf[1024];
+    char buf[PNGLE_BUF_SIZE];
     uint32_t rb, btr;
     lv_fs_read(f, &buf, 8, &rb);
     int chunk_length = ((buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3]) + 4; // add 4 for CRC
@@ -183,7 +185,7 @@ static lv_res_t read_next_chunk(pngle_t * pngle, lv_fs_file_t * f) {
     }
     LV_LOG_INFO("PNG header chunk size: %d", chunk_length);
     while (chunk_length > 0) {
-        btr = (chunk_length < 1024) ? chunk_length : 1024;
+        btr = (chunk_length < PNGLE_BUF_SIZE) ? chunk_length : PNGLE_BUF_SIZE;
         lv_fs_read(f, &buf, btr, &rb);
         chunk_length -= btr;
         if (pngle_feed(pngle, buf, btr) < 0) {
@@ -344,7 +346,7 @@ static lv_res_t pngle_decoder_open(lv_img_decoder_t * decoder, lv_img_decoder_ds
         // feed Pngle with data until image is complete
         uint32_t pos = 0, sz = img_src->data_size, btr;
         while (!ud.data_ready) {
-            btr = (sz < 1024) ? sz : 1024;
+            btr = (sz < PNGLE_BUF_SIZE) ? sz : PNGLE_BUF_SIZE;
             if (pngle_feed(pngle, img_src->data+pos, btr) < 0) {
                 failed = true;
                 LV_LOG_ERROR("Pngle returned an error.\n");
