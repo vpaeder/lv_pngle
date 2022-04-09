@@ -4,7 +4,13 @@ This is a PNG image decoder for [LVGL](https://github.com/lvgl/lvgl) meant for s
 
 ## How to use
 
-You need to include `lv_pngle.h` in your project and call `lv_pngle_init()` after initializing LVGL. That is:
+First of all, don't forget to download Pngle. Using git:
+
+```
+git submodule update --init
+```
+
+Then, you need to include `lv_pngle.h` in your project and call `lv_pngle_init()` after initializing LVGL. That is:
 
 ```
 #include "lv_pngle.h"
