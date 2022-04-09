@@ -4,7 +4,7 @@ This is a PNG image decoder for [LVGL](https://github.com/lvgl/lvgl) meant for s
 
 ## How to use
 
-First of all, don't forget to download Pngle. Using git:
+First of all, don't forget to download Pngle. Using git in *lv_pngle* folder:
 
 ```
 git submodule update --init
