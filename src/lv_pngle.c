@@ -175,7 +175,7 @@ static lv_res_t read_next_chunk(pngle_t * pngle, lv_fs_file_t * f) {
     // chunk structure: length (4 bytes) | chunk type (4 bytes) | chunk data (length) | CRC (4 bytes)
     // we read 4 bytes to get length and add 8 bytes to account for type and CRC
     char buf[PNGLE_BUF_SIZE];
-    uint32_t rb
+    uint32_t rb;
     uint32_t btr;
     lv_fs_read(f, &buf, 8, &rb);
     int chunk_length = ((buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3]) + 4; // add 4 for CRC
