@@ -58,10 +58,10 @@ typedef struct _lv_pngle_data_t {
     bool data_ready;
 
     /** \brief Starting x coordinate (used in read_line mode only). */
-    uint16_t start_x;
+    lv_coord_t start_x;
 
     /** \brief Starting y coordinate (used in read_line mode only). */
-    uint16_t start_y;
+    lv_coord_t start_y;
 
     /** \brief Number of pixels to read (used in read_line mode only). */
     uint32_t n_pixels;
