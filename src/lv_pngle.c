@@ -364,8 +364,8 @@ static lv_res_t pngle_decoder_open(lv_img_decoder_t * decoder, lv_img_decoder_ds
     pngle_set_init_callback(pngle, pngle_init_cb);
     pngle_set_done_callback(pngle, pngle_done_cb);
 
-    uint32_t png_width=0;
-    uint32_t png_height=0;
+    uint32_t png_width = 0;
+    uint32_t png_height = 0;
     bool failed = false;
 
     if(dsc->src_type == LV_IMG_SRC_FILE) {
