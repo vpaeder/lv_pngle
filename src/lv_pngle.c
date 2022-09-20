@@ -162,6 +162,17 @@ static void pngle_draw_cb(pngle_t* pngle, uint32_t x, uint32_t y, uint32_t w, ui
 #endif
 }
 
+/** \brief Function called when a pixel is read.
+ * 
+ *  This version of draw callback stores only a selected area of the image.
+ * 
+ *  \param pngle: pointer to a Pngle instance.
+ *  \param x: horizontal coordinate of pixel.
+ *  \param y: vertical coordinate of pixel.
+ *  \param w: image width.
+ *  \param h: image height.
+ *  \param rgba: pointer to pixel value.
+ */
 static void pngle_draw_partial_cb(pngle_t* pngle, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint8_t *rgba) {
     lv_pngle_data_t * ud = (lv_pngle_data_t*)pngle_get_user_data(pngle);
     LV_LOG_TRACE("received pixel (%d,%d) with rgba color (0x%02x,0x%02x,0x%02x,0x%02x)\n",
@@ -222,7 +233,7 @@ static lv_res_t read_next_chunk(pngle_t * pngle, lv_fs_file_t * f) {
     // chunk structure: length (4 bytes) | chunk type (4 bytes) | chunk data (length) | CRC (4 bytes)
     // we read 4 bytes to get length and add 8 bytes to account for type and CRC
     char buf[PNGLE_BUF_SIZE];
-    uint32_t rb
+    uint32_t rb;
     uint32_t btr;
     lv_fs_read(f, &buf, 8, &rb);
     int chunk_length = ((buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3]) + 4; // add 4 for CRC

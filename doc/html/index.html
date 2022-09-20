@@ -96,7 +96,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p ><a class="anchor" id="md_README"></a> This is a PNG image decoder for <a href="https://github.com/lvgl/lvgl">LVGL</a> meant for systems with limited memory. It uses <a href="https://github.com/kikuchan/pngle">Pngle</a> as a backend. It decodes in a streaming manner. As configured, it uses about 45kB of memory (~44k for Pngle and 1k buffer), plus the size of the buffer needed to store the image.</p>
 <h1>How to use</h1>
-<p >You need to include <code><a class="el" href="lv__pngle_8h.html" title="Header file for LVGL decoder for PNG images using Pngle.">lv_pngle.h</a></code> in your project and call <code><a class="el" href="lv__pngle_8c.html#a1c1150303e5b8ab9d64507cf9671b76e" title="Initializes the decoder for PNG images using Pngle.">lv_pngle_init()</a></code> after initializing LVGL. That is:</p>
+<p >First of all, don't forget to download Pngle. Using git in <em>lv_pngle</em> folder:</p>
+<div class="fragment"><div class="line">git submodule update --init</div>
+</div><!-- fragment --><p >Then, you need to include <code><a class="el" href="lv__pngle_8h.html" title="Header file for LVGL decoder for PNG images using Pngle.">lv_pngle.h</a></code> in your project and call <code><a class="el" href="lv__pngle_8c.html#a1c1150303e5b8ab9d64507cf9671b76e" title="Initializes the decoder for PNG images using Pngle.">lv_pngle_init()</a></code> after initializing LVGL. That is:</p>
 <div class="fragment"><div class="line">#include &quot;lv_pngle.h&quot;</div>
 <div class="line"> </div>
 <div class="line">void main() {</div>

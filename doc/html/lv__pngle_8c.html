@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('lv__pngle_8c.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">lv_pngle.c File Reference</div></div>
@@ -111,6 +112,13 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure to communicate data and useful flags with Pngle.  <a href="struct__lv__pngle__data__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a25a1e1758423a8a978d503c5ff29b6ba"><td class="memItemLeft" align="right" valign="top"><a id="a25a1e1758423a8a978d503c5ff29b6ba" name="a25a1e1758423a8a978d503c5ff29b6ba"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PNGLE_BUF_SIZE</b>&#160;&#160;&#160;1024</td></tr>
+<tr class="memdesc:a25a1e1758423a8a978d503c5ff29b6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of buffer used to feed Pngle. <br /></td></tr>
+<tr class="separator:a25a1e1758423a8a978d503c5ff29b6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ad3d7c1d174bdd9f22c70bc376c27b5a8"><td class="memItemLeft" align="right" valign="top"><a id="ad3d7c1d174bdd9f22c70bc376c27b5a8" name="ad3d7c1d174bdd9f22c70bc376c27b5a8"></a>
@@ -121,52 +129,58 @@ typedef struct <a class="el" href="struct__lv__pngle__data__t.html">_lv_pngle_da
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afbbf3386e8764665e659ef50902406b3"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#afbbf3386e8764665e659ef50902406b3">pngle_decoder_info</a> (struct _lv_img_decoder_t *decoder, const void *src, lv_img_header_t *header)</td></tr>
-<tr class="memdesc:afbbf3386e8764665e659ef50902406b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves PNG image size from given source.  <a href="lv__pngle_8c.html#afbbf3386e8764665e659ef50902406b3">More...</a><br /></td></tr>
+<tr class="memdesc:afbbf3386e8764665e659ef50902406b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve PNG image size from given source.  <a href="lv__pngle_8c.html#afbbf3386e8764665e659ef50902406b3">More...</a><br /></td></tr>
 <tr class="separator:afbbf3386e8764665e659ef50902406b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c0a54661a3fd3869b6e1aaf8fdf858b"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a4c0a54661a3fd3869b6e1aaf8fdf858b">pngle_decoder_open</a> (lv_img_decoder_t *dec, lv_img_decoder_dsc_t *dsc)</td></tr>
-<tr class="memdesc:a4c0a54661a3fd3869b6e1aaf8fdf858b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes PNG image.  <a href="lv__pngle_8c.html#a4c0a54661a3fd3869b6e1aaf8fdf858b">More...</a><br /></td></tr>
-<tr class="separator:a4c0a54661a3fd3869b6e1aaf8fdf858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bac30298ad6c3cef4ee61cd3ae4ab7c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a0bac30298ad6c3cef4ee61cd3ae4ab7c">pngle_decoder_close</a> (lv_img_decoder_t *dec, lv_img_decoder_dsc_t *dsc)</td></tr>
-<tr class="memdesc:a0bac30298ad6c3cef4ee61cd3ae4ab7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes and cleans up decoding data for given descriptor.  <a href="lv__pngle_8c.html#a0bac30298ad6c3cef4ee61cd3ae4ab7c">More...</a><br /></td></tr>
-<tr class="separator:a0bac30298ad6c3cef4ee61cd3ae4ab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4120bf1f7d75ccba1fda6152f57f8b31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a4120bf1f7d75ccba1fda6152f57f8b31">convert_color_depth</a> (uint8_t *img, uint32_t px_cnt)</td></tr>
-<tr class="memdesc:a4120bf1f7d75ccba1fda6152f57f8b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an image buffer to LVGL color format.  <a href="lv__pngle_8c.html#a4120bf1f7d75ccba1fda6152f57f8b31">More...</a><br /></td></tr>
-<tr class="separator:a4120bf1f7d75ccba1fda6152f57f8b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a372fb563cfb279d23e2e29d7fb4cbb"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a7a372fb563cfb279d23e2e29d7fb4cbb">pngle_decoder_open</a> (lv_img_decoder_t *decoder, lv_img_decoder_dsc_t *dsc)</td></tr>
+<tr class="memdesc:a7a372fb563cfb279d23e2e29d7fb4cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode PNG image.  <a href="lv__pngle_8c.html#a7a372fb563cfb279d23e2e29d7fb4cbb">More...</a><br /></td></tr>
+<tr class="separator:a7a372fb563cfb279d23e2e29d7fb4cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71818c5679fbd63a081f368d16903b45"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a71818c5679fbd63a081f368d16903b45">pngle_decoder_read_line</a> (lv_img_decoder_t *decoder, lv_img_decoder_dsc_t *dsc, lv_coord_t x, lv_coord_t y, lv_coord_t len, uint8_t *buf)</td></tr>
+<tr class="memdesc:a71818c5679fbd63a081f368d16903b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read some part of an image.  <a href="lv__pngle_8c.html#a71818c5679fbd63a081f368d16903b45">More...</a><br /></td></tr>
+<tr class="separator:a71818c5679fbd63a081f368d16903b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45ac0751cf0395460bc91f9fd9d8d0f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#af45ac0751cf0395460bc91f9fd9d8d0f">pngle_decoder_close</a> (lv_img_decoder_t *decoder, lv_img_decoder_dsc_t *dsc)</td></tr>
+<tr class="memdesc:af45ac0751cf0395460bc91f9fd9d8d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close and clean up decoding data for given descriptor.  <a href="lv__pngle_8c.html#af45ac0751cf0395460bc91f9fd9d8d0f">More...</a><br /></td></tr>
+<tr class="separator:af45ac0751cf0395460bc91f9fd9d8d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2da05aec844abae9ce03a79b39ba459"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#ab2da05aec844abae9ce03a79b39ba459">convert_color_depth</a> (uint8_t *img, uint32_t px_cnt)</td></tr>
+<tr class="memdesc:ab2da05aec844abae9ce03a79b39ba459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an image buffer to LVGL color format.  <a href="lv__pngle_8c.html#ab2da05aec844abae9ce03a79b39ba459">More...</a><br /></td></tr>
+<tr class="separator:ab2da05aec844abae9ce03a79b39ba459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c1150303e5b8ab9d64507cf9671b76e"><td class="memItemLeft" align="right" valign="top"><a id="a1c1150303e5b8ab9d64507cf9671b76e" name="a1c1150303e5b8ab9d64507cf9671b76e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (void)</td></tr>
 <tr class="memdesc:a1c1150303e5b8ab9d64507cf9671b76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the decoder for PNG images using Pngle. <br /></td></tr>
 <tr class="separator:a1c1150303e5b8ab9d64507cf9671b76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f71b676ca94978cb4484208881598a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a32f71b676ca94978cb4484208881598a">lv_pngle_data_init</a> (pngle_t *pngle, <a class="el" href="lv__pngle_8c.html#ad3d7c1d174bdd9f22c70bc376c27b5a8">lv_pngle_data_t</a> *ud)</td></tr>
-<tr class="memdesc:a32f71b676ca94978cb4484208881598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a data structure to interact with Pngle.  <a href="lv__pngle_8c.html#a32f71b676ca94978cb4484208881598a">More...</a><br /></td></tr>
-<tr class="separator:a32f71b676ca94978cb4484208881598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05df440cc6a10a179560e17c26a38ff7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a05df440cc6a10a179560e17c26a38ff7">lv_pngle_buffer_init</a> (uint8_t **buf, uint32_t n_px)</td></tr>
-<tr class="memdesc:a05df440cc6a10a179560e17c26a38ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes data buffer.  <a href="lv__pngle_8c.html#a05df440cc6a10a179560e17c26a38ff7">More...</a><br /></td></tr>
-<tr class="separator:a05df440cc6a10a179560e17c26a38ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d1ffcbcb0a0c30370aec1b9612b6f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a08d1ffcbcb0a0c30370aec1b9612b6f4">pngle_init_cb</a> (pngle_t *pngle, uint32_t w, uint32_t h)</td></tr>
-<tr class="memdesc:a08d1ffcbcb0a0c30370aec1b9612b6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when image width and height could be read from header.  <a href="lv__pngle_8c.html#a08d1ffcbcb0a0c30370aec1b9612b6f4">More...</a><br /></td></tr>
-<tr class="separator:a08d1ffcbcb0a0c30370aec1b9612b6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812a4a1071b197fb6f264f0b771b96ea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a812a4a1071b197fb6f264f0b771b96ea">pngle_draw_cb</a> (pngle_t *pngle, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint8_t *rgba)</td></tr>
-<tr class="memdesc:a812a4a1071b197fb6f264f0b771b96ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a pixel is read.  <a href="lv__pngle_8c.html#a812a4a1071b197fb6f264f0b771b96ea">More...</a><br /></td></tr>
-<tr class="separator:a812a4a1071b197fb6f264f0b771b96ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f5a98eea992c95c2ff863aa2d9fe16a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a7f5a98eea992c95c2ff863aa2d9fe16a">pngle_done_cb</a> (pngle_t *pngle)</td></tr>
-<tr class="memdesc:a7f5a98eea992c95c2ff863aa2d9fe16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when reading image data is done.  <a href="lv__pngle_8c.html#a7f5a98eea992c95c2ff863aa2d9fe16a">More...</a><br /></td></tr>
-<tr class="separator:a7f5a98eea992c95c2ff863aa2d9fe16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12eef6f3bf440d50f7be6888f2357128"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a12eef6f3bf440d50f7be6888f2357128">read_next_chunk</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
-<tr class="memdesc:a12eef6f3bf440d50f7be6888f2357128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads next image chunk.  <a href="lv__pngle_8c.html#a12eef6f3bf440d50f7be6888f2357128">More...</a><br /></td></tr>
-<tr class="separator:a12eef6f3bf440d50f7be6888f2357128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b23aec0df990995be09f1dfef9f3ec2"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a3b23aec0df990995be09f1dfef9f3ec2">get_pngle_header</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
-<tr class="memdesc:a3b23aec0df990995be09f1dfef9f3ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads PNG image header.  <a href="lv__pngle_8c.html#a3b23aec0df990995be09f1dfef9f3ec2">More...</a><br /></td></tr>
-<tr class="separator:a3b23aec0df990995be09f1dfef9f3ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f07fe8c446aa323fddbc39982efa82f"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a7f07fe8c446aa323fddbc39982efa82f">get_pngle_data</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
-<tr class="memdesc:a7f07fe8c446aa323fddbc39982efa82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads PNG image data.  <a href="lv__pngle_8c.html#a7f07fe8c446aa323fddbc39982efa82f">More...</a><br /></td></tr>
-<tr class="separator:a7f07fe8c446aa323fddbc39982efa82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0c9468534ca67bc6dd55622c562707"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a3a0c9468534ca67bc6dd55622c562707">lv_pngle_data_init</a> (pngle_t *pngle, <a class="el" href="lv__pngle_8c.html#ad3d7c1d174bdd9f22c70bc376c27b5a8">lv_pngle_data_t</a> *ud)</td></tr>
+<tr class="memdesc:a3a0c9468534ca67bc6dd55622c562707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a data structure to interact with Pngle.  <a href="lv__pngle_8c.html#a3a0c9468534ca67bc6dd55622c562707">More...</a><br /></td></tr>
+<tr class="separator:a3a0c9468534ca67bc6dd55622c562707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d758827b8d04bbc26d13efa16de36a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#af8d758827b8d04bbc26d13efa16de36a">lv_pngle_buffer_init</a> (uint8_t **buf, uint32_t n_px)</td></tr>
+<tr class="memdesc:af8d758827b8d04bbc26d13efa16de36a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize data buffer.  <a href="lv__pngle_8c.html#af8d758827b8d04bbc26d13efa16de36a">More...</a><br /></td></tr>
+<tr class="separator:af8d758827b8d04bbc26d13efa16de36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690012a9bcaa53e8878c5ea73d5e85f0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a690012a9bcaa53e8878c5ea73d5e85f0">pngle_init_cb</a> (pngle_t *pngle, uint32_t w, uint32_t h)</td></tr>
+<tr class="memdesc:a690012a9bcaa53e8878c5ea73d5e85f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when image width and height could be read from header.  <a href="lv__pngle_8c.html#a690012a9bcaa53e8878c5ea73d5e85f0">More...</a><br /></td></tr>
+<tr class="separator:a690012a9bcaa53e8878c5ea73d5e85f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50496d2432f8eebe95c43252be339dfe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a50496d2432f8eebe95c43252be339dfe">pngle_draw_cb</a> (pngle_t *pngle, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint8_t *rgba)</td></tr>
+<tr class="memdesc:a50496d2432f8eebe95c43252be339dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a pixel is read.  <a href="lv__pngle_8c.html#a50496d2432f8eebe95c43252be339dfe">More...</a><br /></td></tr>
+<tr class="separator:a50496d2432f8eebe95c43252be339dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2edcb2118eb89f6d44b1cc4aa047f7e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#ae2edcb2118eb89f6d44b1cc4aa047f7e">pngle_draw_partial_cb</a> (pngle_t *pngle, uint32_t x, uint32_t y, uint32_t w, uint32_t h, uint8_t *rgba)</td></tr>
+<tr class="memdesc:ae2edcb2118eb89f6d44b1cc4aa047f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when a pixel is read.  <a href="lv__pngle_8c.html#ae2edcb2118eb89f6d44b1cc4aa047f7e">More...</a><br /></td></tr>
+<tr class="separator:ae2edcb2118eb89f6d44b1cc4aa047f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac8edfd1856590d0457cb5ca0d1e149"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a3ac8edfd1856590d0457cb5ca0d1e149">pngle_done_cb</a> (pngle_t *pngle)</td></tr>
+<tr class="memdesc:a3ac8edfd1856590d0457cb5ca0d1e149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called when reading image data is done.  <a href="lv__pngle_8c.html#a3ac8edfd1856590d0457cb5ca0d1e149">More...</a><br /></td></tr>
+<tr class="separator:a3ac8edfd1856590d0457cb5ca0d1e149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57e24878fd881921208a9efe2dc3230"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#ab57e24878fd881921208a9efe2dc3230">read_next_chunk</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
+<tr class="memdesc:ab57e24878fd881921208a9efe2dc3230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read next image chunk.  <a href="lv__pngle_8c.html#ab57e24878fd881921208a9efe2dc3230">More...</a><br /></td></tr>
+<tr class="separator:ab57e24878fd881921208a9efe2dc3230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5af9fbd634ed3ed9f682086d5716ba9"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#ac5af9fbd634ed3ed9f682086d5716ba9">get_pngle_header</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
+<tr class="memdesc:ac5af9fbd634ed3ed9f682086d5716ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PNG image header.  <a href="lv__pngle_8c.html#ac5af9fbd634ed3ed9f682086d5716ba9">More...</a><br /></td></tr>
+<tr class="separator:ac5af9fbd634ed3ed9f682086d5716ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3eda2a10b72ea29406883dbc3613eb"><td class="memItemLeft" align="right" valign="top">static lv_res_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lv__pngle_8c.html#a2b3eda2a10b72ea29406883dbc3613eb">get_pngle_data</a> (pngle_t *pngle, lv_fs_file_t *f)</td></tr>
+<tr class="memdesc:a2b3eda2a10b72ea29406883dbc3613eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read PNG image data.  <a href="lv__pngle_8c.html#a2b3eda2a10b72ea29406883dbc3613eb">More...</a><br /></td></tr>
+<tr class="separator:a2b3eda2a10b72ea29406883dbc3613eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implementation file for LVGL decoder for PNG images using Pngle. </p>
 <p >Author: Vincent Paeder License: MIT </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a4120bf1f7d75ccba1fda6152f57f8b31" name="a4120bf1f7d75ccba1fda6152f57f8b31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4120bf1f7d75ccba1fda6152f57f8b31">&#9670;&nbsp;</a></span>convert_color_depth()</h2>
+<a id="ab2da05aec844abae9ce03a79b39ba459" name="ab2da05aec844abae9ce03a79b39ba459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2da05aec844abae9ce03a79b39ba459">&#9670;&nbsp;</a></span>convert_color_depth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +189,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void convert_color_depth </td>
+          <td class="memname">static void convert_color_depth </td>
           <td>(</td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>img</em>, </td>
@@ -199,7 +213,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Converts an image buffer to LVGL color format. </p>
+<p>Convert an image buffer to LVGL color format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">img</td><td>pointer to image buffer. </td></tr>
@@ -210,8 +224,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a7f07fe8c446aa323fddbc39982efa82f" name="a7f07fe8c446aa323fddbc39982efa82f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f07fe8c446aa323fddbc39982efa82f">&#9670;&nbsp;</a></span>get_pngle_data()</h2>
+<a id="a2b3eda2a10b72ea29406883dbc3613eb" name="a2b3eda2a10b72ea29406883dbc3613eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3eda2a10b72ea29406883dbc3613eb">&#9670;&nbsp;</a></span>get_pngle_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +234,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lv_res_t get_pngle_data </td>
+          <td class="memname">static lv_res_t get_pngle_data </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -244,7 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Reads PNG image data. </p>
+<p>Read PNG image data. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pngle</td><td>pointer to a Pngle instance. </td></tr>
@@ -255,8 +269,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a3b23aec0df990995be09f1dfef9f3ec2" name="a3b23aec0df990995be09f1dfef9f3ec2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b23aec0df990995be09f1dfef9f3ec2">&#9670;&nbsp;</a></span>get_pngle_header()</h2>
+<a id="ac5af9fbd634ed3ed9f682086d5716ba9" name="ac5af9fbd634ed3ed9f682086d5716ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5af9fbd634ed3ed9f682086d5716ba9">&#9670;&nbsp;</a></span>get_pngle_header()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +279,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lv_res_t get_pngle_header </td>
+          <td class="memname">static lv_res_t get_pngle_header </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -289,7 +303,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Reads PNG image header. </p>
+<p>Read PNG image header. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pngle</td><td>pointer to a Pngle instance. </td></tr>
@@ -300,8 +314,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a05df440cc6a10a179560e17c26a38ff7" name="a05df440cc6a10a179560e17c26a38ff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05df440cc6a10a179560e17c26a38ff7">&#9670;&nbsp;</a></span>lv_pngle_buffer_init()</h2>
+<a id="af8d758827b8d04bbc26d13efa16de36a" name="af8d758827b8d04bbc26d13efa16de36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d758827b8d04bbc26d13efa16de36a">&#9670;&nbsp;</a></span>lv_pngle_buffer_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +324,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lv_pngle_buffer_init </td>
+          <td class="memname">static void lv_pngle_buffer_init </td>
           <td>(</td>
           <td class="paramtype">uint8_t **&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
@@ -334,7 +348,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Initializes data buffer. </p>
+<p>Initialize data buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buf</td><td>pointer to data buffer. </td></tr>
@@ -345,8 +359,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a32f71b676ca94978cb4484208881598a" name="a32f71b676ca94978cb4484208881598a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32f71b676ca94978cb4484208881598a">&#9670;&nbsp;</a></span>lv_pngle_data_init()</h2>
+<a id="a3a0c9468534ca67bc6dd55622c562707" name="a3a0c9468534ca67bc6dd55622c562707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0c9468534ca67bc6dd55622c562707">&#9670;&nbsp;</a></span>lv_pngle_data_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +369,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void lv_pngle_data_init </td>
+          <td class="memname">static void lv_pngle_data_init </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -379,7 +393,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Initializes a data structure to interact with Pngle. </p>
+<p>Initialize a data structure to interact with Pngle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pngle</td><td>pointer to a Pngle instance. </td></tr>
@@ -390,8 +404,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a0bac30298ad6c3cef4ee61cd3ae4ab7c" name="a0bac30298ad6c3cef4ee61cd3ae4ab7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bac30298ad6c3cef4ee61cd3ae4ab7c">&#9670;&nbsp;</a></span>pngle_decoder_close()</h2>
+<a id="af45ac0751cf0395460bc91f9fd9d8d0f" name="af45ac0751cf0395460bc91f9fd9d8d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45ac0751cf0395460bc91f9fd9d8d0f">&#9670;&nbsp;</a></span>pngle_decoder_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +417,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
           <td class="memname">static void pngle_decoder_close </td>
           <td>(</td>
           <td class="paramtype">lv_img_decoder_t *&#160;</td>
-          <td class="paramname"><em>dec</em>, </td>
+          <td class="paramname"><em>decoder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -424,10 +438,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Closes and cleans up decoding data for given descriptor. </p>
+<p>Close and clean up decoding data for given descriptor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dec</td><td>underlying image decoder. </td></tr>
+    <tr><td class="paramname">decoder</td><td>underlying image decoder. </td></tr>
     <tr><td class="paramname">dsc</td><td>image descriptor. </td></tr>
   </table>
   </dd>
@@ -475,7 +489,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves PNG image size from given source. </p>
+<p>Retrieve PNG image size from given source. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">decoder</td><td>underlying image decoder. </td></tr>
@@ -488,8 +502,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a4c0a54661a3fd3869b6e1aaf8fdf858b" name="a4c0a54661a3fd3869b6e1aaf8fdf858b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c0a54661a3fd3869b6e1aaf8fdf858b">&#9670;&nbsp;</a></span>pngle_decoder_open()</h2>
+<a id="a7a372fb563cfb279d23e2e29d7fb4cbb" name="a7a372fb563cfb279d23e2e29d7fb4cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a372fb563cfb279d23e2e29d7fb4cbb">&#9670;&nbsp;</a></span>pngle_decoder_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,7 +515,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
           <td class="memname">static lv_res_t pngle_decoder_open </td>
           <td>(</td>
           <td class="paramtype">lv_img_decoder_t *&#160;</td>
-          <td class="paramname"><em>dec</em>, </td>
+          <td class="paramname"><em>decoder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -522,10 +536,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Decodes PNG image. </p>
+<p>Decode PNG image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dec</td><td>underlying image decoder. </td></tr>
+    <tr><td class="paramname">decoder</td><td>underlying image decoder. </td></tr>
     <tr><td class="paramname">dsc</td><td>image descriptor containing source info. </td></tr>
   </table>
   </dd>
@@ -534,8 +548,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a7f5a98eea992c95c2ff863aa2d9fe16a" name="a7f5a98eea992c95c2ff863aa2d9fe16a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f5a98eea992c95c2ff863aa2d9fe16a">&#9670;&nbsp;</a></span>pngle_done_cb()</h2>
+<a id="a71818c5679fbd63a081f368d16903b45" name="a71818c5679fbd63a081f368d16903b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71818c5679fbd63a081f368d16903b45">&#9670;&nbsp;</a></span>pngle_decoder_read_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -544,7 +558,81 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pngle_done_cb </td>
+          <td class="memname">static lv_res_t pngle_decoder_read_line </td>
+          <td>(</td>
+          <td class="paramtype">lv_img_decoder_t *&#160;</td>
+          <td class="paramname"><em>decoder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_img_decoder_dsc_t *&#160;</td>
+          <td class="paramname"><em>dsc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">lv_coord_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read some part of an image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>underlying image decoder. </td></tr>
+    <tr><td class="paramname">dsc</td><td>image descriptor containing source info. </td></tr>
+    <tr><td class="paramname">x</td><td>starting x coordinate. </td></tr>
+    <tr><td class="paramname">y</td><td>starting y coordinate. </td></tr>
+    <tr><td class="paramname">len</td><td>number of pixels to read. </td></tr>
+    <tr><td class="paramname">buf</td><td>data buffer to use as storage (must be pre-allocated). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>LV_RES_OK if successful, LV_RES_INV if failed. </dd></dl>
+
+</div>
+</div>
+<a id="a3ac8edfd1856590d0457cb5ca0d1e149" name="a3ac8edfd1856590d0457cb5ca0d1e149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac8edfd1856590d0457cb5ca0d1e149">&#9670;&nbsp;</a></span>pngle_done_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void pngle_done_cb </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em></td><td>)</td>
@@ -568,8 +656,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a812a4a1071b197fb6f264f0b771b96ea" name="a812a4a1071b197fb6f264f0b771b96ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a812a4a1071b197fb6f264f0b771b96ea">&#9670;&nbsp;</a></span>pngle_draw_cb()</h2>
+<a id="a50496d2432f8eebe95c43252be339dfe" name="a50496d2432f8eebe95c43252be339dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50496d2432f8eebe95c43252be339dfe">&#9670;&nbsp;</a></span>pngle_draw_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -578,7 +666,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pngle_draw_cb </td>
+          <td class="memname">static void pngle_draw_cb </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -641,8 +729,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a08d1ffcbcb0a0c30370aec1b9612b6f4" name="a08d1ffcbcb0a0c30370aec1b9612b6f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08d1ffcbcb0a0c30370aec1b9612b6f4">&#9670;&nbsp;</a></span>pngle_init_cb()</h2>
+<a id="ae2edcb2118eb89f6d44b1cc4aa047f7e" name="ae2edcb2118eb89f6d44b1cc4aa047f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2edcb2118eb89f6d44b1cc4aa047f7e">&#9670;&nbsp;</a></span>pngle_draw_partial_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -651,7 +739,81 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void pngle_init_cb </td>
+          <td class="memname">static void pngle_draw_partial_cb </td>
+          <td>(</td>
+          <td class="paramtype">pngle_t *&#160;</td>
+          <td class="paramname"><em>pngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>rgba</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function called when a pixel is read. </p>
+<p >This version of draw callback stores only a selected area of the image.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pngle</td><td>pointer to a Pngle instance. </td></tr>
+    <tr><td class="paramname">x</td><td>horizontal coordinate of pixel. </td></tr>
+    <tr><td class="paramname">y</td><td>vertical coordinate of pixel. </td></tr>
+    <tr><td class="paramname">w</td><td>image width. </td></tr>
+    <tr><td class="paramname">h</td><td>image height. </td></tr>
+    <tr><td class="paramname">rgba</td><td>pointer to pixel value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a690012a9bcaa53e8878c5ea73d5e85f0" name="a690012a9bcaa53e8878c5ea73d5e85f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690012a9bcaa53e8878c5ea73d5e85f0">&#9670;&nbsp;</a></span>pngle_init_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void pngle_init_cb </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -693,8 +855,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 
 </div>
 </div>
-<a id="a12eef6f3bf440d50f7be6888f2357128" name="a12eef6f3bf440d50f7be6888f2357128"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12eef6f3bf440d50f7be6888f2357128">&#9670;&nbsp;</a></span>read_next_chunk()</h2>
+<a id="ab57e24878fd881921208a9efe2dc3230" name="ab57e24878fd881921208a9efe2dc3230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57e24878fd881921208a9efe2dc3230">&#9670;&nbsp;</a></span>read_next_chunk()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,7 +865,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lv_res_t read_next_chunk </td>
+          <td class="memname">static lv_res_t read_next_chunk </td>
           <td>(</td>
           <td class="paramtype">pngle_t *&#160;</td>
           <td class="paramname"><em>pngle</em>, </td>
@@ -727,7 +889,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>lv_pngle_init</b> (vo
 </table>
 </div><div class="memdoc">
 
-<p>Reads next image chunk. </p>
+<p>Read next image chunk. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pngle</td><td>pointer to a Pngle instance. </td></tr>
